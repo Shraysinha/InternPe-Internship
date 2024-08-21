@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Quiz App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Theme and Dark Mode Toggles -->
+        <div class="d-flex justify-content-between">
+           
+        </div>
+
+        <!-- Quiz Header -->
+        <div id="quiz-header" class="text-center">
+            <h1>Enhanced Quiz App</h1>
+            <p>Select a category and difficulty level to start the quiz.</p>
+        </div>
+
+        <!-- Quiz Settings -->
+        <div id="quiz-settings" class="d-flex justify-content-center my-4">
+            <select id="category" class="form-select me-2">
+                <option value="general">General Knowledge</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="dsa">DSA</option>
+            </select>
+            <select id="difficulty" class="form-select">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="start-quiz" class="btn btn-primary ms-2">Start Quiz</button>
+        </div>
+
+        <!-- Progress Bar and Timer -->
+        <div class="d-flex justify-content-between mb-4">
+            <div class="progress flex-grow-1 me-3">
+                <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div id="timer" class="badge bg-danger p-2">Time: 30s</div>
+        </div>
+
+        <!-- Quiz Content -->
+        <div id="quiz-content" class="d-none">
+            <div id="question" class="mb-4"></div>
+            <div id="options" class="mb-4"></div>
+            <div class="d-flex justify-content-between">
+                <button id="prev-question" class="btn btn-secondary">Previous</button>
+                <button id="next-question" class="btn btn-primary">Next</button>
+                <button id="hint" class="btn btn-warning">Hint</button>
+            </div>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="d-none text-center">
+            <h3>Your Score: <span id="score"></span></h3>
+            <h4>Accuracy: <span id="accuracy"></span>%</h4>
+            <h4>Average Time per Question: <span id="avg-time"></span>s</h4>
+            <button id="review-answers" class="btn btn-info mt-3">Review Answers</button>
+            <button id="restart-quiz" class="btn btn-success mt-3">Restart Quiz</button>
+            <button id="share-result" class="btn btn-primary mt-3">Share Result</button>
+        </div>
+
+        <!-- Review Section -->
+        <div id="review-section" class="d-none">
+            <h3 class="text-center">Review Your Answers</h3>
+            <div id="review-content"></div>
+            <button id="back-to-results" class="btn btn-secondary mt-3">Back to Results</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
